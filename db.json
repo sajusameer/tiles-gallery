@@ -1,0 +1,63 @@
+{
+  "tiles": [
+    { "id": "tile_001", "title": "Ceramic Blue Tile", "description": "Premium ceramic tile with blue glaze finish", "image": "/tiles/tile1.jpg", "category": "ceramic", "price": 45.99, "currency": "USD", "dimensions": "60x60 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_002", "title": "Modern White Tile", "description": "Elegant white tile for modern interiors", "image": "/tiles/tile2.jpg", "category": "porcelain", "price": 55.0, "currency": "USD", "dimensions": "80x80 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_003", "title": "Marble Finish Tile", "description": "Luxury marble finish tile", "image": "/tiles/tile3.jpg", "category": "marble", "price": 75.5, "currency": "USD", "dimensions": "100x100 cm", "material": "Marble", "inStock": true },
+    { "id": "tile_004", "title": "Wood Style Tile", "description": "Natural wood texture tile", "image": "/tiles/tile4.jpg", "category": "wood", "price": 60.0, "currency": "USD", "dimensions": "120x20 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_005", "title": "Black Matte Tile", "description": "Stylish matte black tile", "image": "/tiles/tile5.jpg", "category": "ceramic", "price": 65.99, "currency": "USD", "dimensions": "60x60 cm", "material": "Ceramic", "inStock": false },
+
+    { "id": "tile_006", "title": "Geometric Pattern Tile", "description": "Modern geometric design", "image": "/tiles/tile6.jpg", "category": "decorative", "price": 70.0, "currency": "USD", "dimensions": "50x50 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_007", "title": "Emerald Gloss Tile", "description": "Deep green glossy finish", "image": "/tiles/tile7.jpg", "category": "ceramic", "price": 48.5, "currency": "USD", "dimensions": "30x60 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_008", "title": "Slate Grey Stone", "description": "Natural slate texture", "image": "/tiles/tile8.jpg", "category": "stone", "price": 82.0, "currency": "USD", "dimensions": "60x90 cm", "material": "Stone", "inStock": true },
+    { "id": "tile_009", "title": "Terracotta Classic", "description": "Rustic clay style tile", "image": "/tiles/tile9.jpg", "category": "rustic", "price": 38.0, "currency": "USD", "dimensions": "40x40 cm", "material": "Clay", "inStock": true },
+    { "id": "tile_010", "title": "Sandstone Polished", "description": "Smooth sandstone finish", "image": "/tiles/tile10.jpg", "category": "marble", "price": 95.0, "currency": "USD", "dimensions": "60x120 cm", "material": "Stone", "inStock": false },
+
+    { "id": "tile_011", "title": "Teal Mosaic", "description": "Small mosaic tiles", "image": "/tiles/tile11.jpg", "category": "decorative", "price": 110.0, "currency": "USD", "dimensions": "30x30 cm", "material": "Glass", "inStock": true },
+    { "id": "tile_012", "title": "Oak Grain Porcelain", "description": "Wood look porcelain", "image": "/tiles/tile12.jpg", "category": "wood", "price": 62.5, "currency": "USD", "dimensions": "20x120 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_013", "title": "Concrete Industrial", "description": "Industrial concrete style", "image": "/tiles/tile13.jpg", "category": "industrial", "price": 50.0, "currency": "USD", "dimensions": "100x100 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_014", "title": "Hexagon Honeycomb", "description": "Hexagon shaped tile", "image": "/tiles/tile14.jpg", "category": "decorative", "price": 68.99, "currency": "USD", "dimensions": "25x25 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_015", "title": "Royal Gold Vein", "description": "Luxury gold vein marble", "image": "/tiles/tile15.jpg", "category": "marble", "price": 145.0, "currency": "USD", "dimensions": "120x120 cm", "material": "Marble", "inStock": true },
+
+    { "id": "tile_016", "title": "Mint Subway Tile", "description": "Classic subway design", "image": "/tiles/tile16.jpg", "category": "ceramic", "price": 29.99, "currency": "USD", "dimensions": "10x30 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_017", "title": "Charcoal Texture", "description": "Anti-slip texture tile", "image": "/tiles/tile17.jpg", "category": "porcelain", "price": 58.0, "currency": "USD", "dimensions": "60x60 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_018", "title": "Victorian Pattern", "description": "Vintage pattern tile", "image": "/tiles/tile18.jpg", "category": "decorative", "price": 85.0, "currency": "USD", "dimensions": "20x20 cm", "material": "Ceramic", "inStock": false },
+    { "id": "tile_019", "title": "Pebble Stone Mix", "description": "Natural pebble finish", "image": "/tiles/tile19.jpg", "category": "stone", "price": 120.0, "currency": "USD", "dimensions": "30x30 cm", "material": "Stone", "inStock": true },
+    { "id": "tile_020", "title": "Ivory Travertine", "description": "Elegant travertine stone", "image": "/tiles/tile20.jpg", "category": "marble", "price": 88.0, "currency": "USD", "dimensions": "45x45 cm", "material": "Travertine", "inStock": true },
+
+    { "id": "tile_021", "title": "Midnight Navy", "description": "Deep navy glossy tile", "image": "/tiles/tile21.jpg", "category": "ceramic", "price": 52.0, "currency": "USD", "dimensions": "30x90 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_022", "title": "Bronze Metallic", "description": "Metallic shine finish", "image": "/tiles/tile22.jpg", "category": "industrial", "price": 99.99, "currency": "USD", "dimensions": "60x60 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_023", "title": "Walnut Plank", "description": "Dark wood plank style", "image": "/tiles/tile23.jpg", "category": "wood", "price": 64.5, "currency": "USD", "dimensions": "20x100 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_024", "title": "Crystal White Sparkle", "description": "Shiny quartz effect", "image": "/tiles/tile24.jpg", "category": "porcelain", "price": 78.0, "currency": "USD", "dimensions": "60x60 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_025", "title": "Checkerboard Black", "description": "Classic checker pattern", "image": "/tiles/tile25.jpg", "category": "ceramic", "price": 35.0, "currency": "USD", "dimensions": "30x30 cm", "material": "Ceramic", "inStock": true },
+
+    { "id": "tile_026", "title": "Soft Rose Matte", "description": "Pastel rose finish", "image": "/tiles/tile26.jpg", "category": "decorative", "price": 49.0, "currency": "USD", "dimensions": "20x20 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_027", "title": "Granite Speckle", "description": "Granite look tile", "image": "/tiles/tile27.jpg", "category": "stone", "price": 72.0, "currency": "USD", "dimensions": "60x60 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_028", "title": "Onyx Green", "description": "Dark green luxury tile", "image": "/tiles/tile28.jpg", "category": "marble", "price": 115.0, "currency": "USD", "dimensions": "80x80 cm", "material": "Porcelain", "inStock": false },
+    { "id": "tile_029", "title": "Herringbone Grey", "description": "Patterned grey tile", "image": "/tiles/tile29.jpg", "category": "decorative", "price": 89.99, "currency": "USD", "dimensions": "30x60 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_030", "title": "Sunset Orange", "description": "Bright orange tile", "image": "/tiles/tile30.jpg", "category": "ceramic", "price": 42.0, "currency": "USD", "dimensions": "15x15 cm", "material": "Ceramic", "inStock": true },
+
+    { "id": "tile_031", "title": "Arctic Blue Pearl", "description": "Pearl finish blue tile", "image": "/tiles/tile31.jpg", "category": "porcelain", "price": 67.5, "currency": "USD", "dimensions": "60x60 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_032", "title": "Brick Red Rustic", "description": "Rustic brick style", "image": "/tiles/tile32.jpg", "category": "rustic", "price": 55.0, "currency": "USD", "dimensions": "7x24 cm", "material": "Clay", "inStock": true },
+    { "id": "tile_033", "title": "Silver Fox Marble", "description": "Grey marble texture", "image": "/tiles/tile33.jpg", "category": "marble", "price": 92.0, "currency": "USD", "dimensions": "60x60 cm", "material": "Marble", "inStock": true },
+    { "id": "tile_034", "title": "Beach Sand Matte", "description": "Soft beige tile", "image": "/tiles/tile34.jpg", "category": "ceramic", "price": 39.99, "currency": "USD", "dimensions": "45x45 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_035", "title": "Graphite Grid", "description": "Grid pattern tile", "image": "/tiles/tile35.jpg", "category": "industrial", "price": 48.0, "currency": "USD", "dimensions": "30x30 cm", "material": "Porcelain", "inStock": false },
+
+    { "id": "tile_036", "title": "Blue Star Encaustic", "description": "Artistic star pattern", "image": "/tiles/tile36.jpg", "category": "decorative", "price": 105.0, "currency": "USD", "dimensions": "20x20 cm", "material": "Cement", "inStock": true },
+    { "id": "tile_037", "title": "Maple Wood Light", "description": "Light wood effect", "image": "/tiles/tile37.jpg", "category": "wood", "price": 59.0, "currency": "USD", "dimensions": "15x90 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_038", "title": "Deep Plum Satin", "description": "Purple satin finish", "image": "/tiles/tile38.jpg", "category": "ceramic", "price": 54.0, "currency": "USD", "dimensions": "30x60 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_039", "title": "Limestone Sahara", "description": "Sandy limestone look", "image": "/tiles/tile39.jpg", "category": "stone", "price": 76.5, "currency": "USD", "dimensions": "60x60 cm", "material": "Limestone", "inStock": true },
+    { "id": "tile_040", "title": "Chevron Ash Wood", "description": "Chevron wood design", "image": "/tiles/tile40.jpg", "category": "wood", "price": 88.0, "currency": "USD", "dimensions": "40x80 cm", "material": "Porcelain", "inStock": true },
+
+    { "id": "tile_041", "title": "Lava Rock Black", "description": "Volcanic stone style", "image": "/tiles/tile41.jpg", "category": "stone", "price": 130.0, "currency": "USD", "dimensions": "30x60 cm", "material": "Stone", "inStock": true },
+    { "id": "tile_042", "title": "Champagne Marble", "description": "Luxury champagne marble", "image": "/tiles/tile42.jpg", "category": "marble", "price": 110.0, "currency": "USD", "dimensions": "80x80 cm", "material": "Marble", "inStock": false },
+    { "id": "tile_043", "title": "Cobalt Mosaic", "description": "Blue glass mosaic", "image": "/tiles/tile43.jpg", "category": "decorative", "price": 140.0, "currency": "USD", "dimensions": "30x30 cm", "material": "Glass", "inStock": true },
+    { "id": "tile_044", "title": "Steel Grey Large", "description": "Large industrial tile", "image": "/tiles/tile44.jpg", "category": "industrial", "price": 95.0, "currency": "USD", "dimensions": "120x120 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_045", "title": "Desert Rose", "description": "Rustic desert tone", "image": "/tiles/tile45.jpg", "category": "rustic", "price": 44.0, "currency": "USD", "dimensions": "30x30 cm", "material": "Ceramic", "inStock": true },
+
+    { "id": "tile_046", "title": "Ice White Ripple", "description": "Ripple textured tile", "image": "/tiles/tile46.jpg", "category": "ceramic", "price": 37.5, "currency": "USD", "dimensions": "25x50 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_047", "title": "Aged Copper", "description": "Copper patina look", "image": "/tiles/tile47.jpg", "category": "industrial", "price": 82.99, "currency": "USD", "dimensions": "60x60 cm", "material": "Porcelain", "inStock": true },
+    { "id": "tile_048", "title": "Honey Onyx", "description": "Luxury translucent stone", "image": "/tiles/tile48.jpg", "category": "marble", "price": 250.0, "currency": "USD", "dimensions": "60x60 cm", "material": "Onyx", "inStock": false },
+    { "id": "tile_049", "title": "Sky Blue Gloss", "description": "Bright glossy blue tile", "image": "/tiles/tile49.jpg", "category": "ceramic", "price": 28.0, "currency": "USD", "dimensions": "20x20 cm", "material": "Ceramic", "inStock": true },
+    { "id": "tile_050", "title": "Zebra Stone Black", "description": "Black white striped stone", "image": "/tiles/tile50.jpg", "category": "stone", "price": 160.0, "currency": "USD", "dimensions": "60x90 cm", "material": "Stone", "inStock": true }
+  ]
+}
