@@ -4,7 +4,7 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 export default function RegisterPage() {
@@ -116,7 +116,19 @@ export default function RegisterPage() {
   <button className="w-full bg-[#d4af37] text-black py-2 rounded">
     Register
   </button>
-</form>
+</form>    
+          <button
+            onClick={async () => {
+              await authClient.signIn.social({
+                provider: "google",
+                callbackURL: "/",
+              });
+            }}
+            className="w-full flex items-center justify-center gap-2 text-white
+             border border-[#d4af37] py-2 rounded mt-3 hover:bg-[#d4af37] hover:text-black transition"
+          >
+            <FaGoogle /> Continue with Google
+          </button>
 
         <p className="mt-4 text-center text-gray-400">
           Already have an account?{" "}

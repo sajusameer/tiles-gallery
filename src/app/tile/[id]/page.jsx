@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 
 export default async function TileDetails({ params }) {
-  // ✅ Next.js 15+ এ headers() কে await করতে হয়
+  
   const h = await headers();
 
   const headerObj = {};
@@ -20,10 +20,10 @@ export default async function TileDetails({ params }) {
     redirect("/login");
   }
 
-  // ✅ Next.js 15+ এ params কে ও await করা নিরাপদ
+  
   const { id } = await params;
 
-  // 📦 fetch tiles
+
 const res = await fetch("http://localhost:3000/data.json", {
   cache: "no-store",
 });

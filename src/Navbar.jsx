@@ -2,13 +2,20 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useSession, authClient } from "@/lib/auth-client";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  
-  const isLoggedIn = false;
-  
+  // 🔐 real session
+  const { data: session, isPending } = useSession();
+
+  const isLoggedIn = !!session;
+
+  const handleLogout = async () => {
+    await authClient.signOut();
+    window.location.href = "/login";
+  };
 
   return (
     <nav className="bg-black text-white border-b border-[#d4af37]">
@@ -27,35 +34,37 @@ export default function Navbar() {
         </div>
 
         {/* Right side */}
-  <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
 
-  {!isLoggedIn ? (
-    <Link
-      href="/login"
-      className="bg-[#d4af37] text-black px-4 py-1 rounded"
-    >
-      Login
-    </Link>
-  ) : (
-    <>
-      <Link
-        href="/my-profile"
-        className="text-[#d4af37]"
-      >
-        My Profile
-      </Link>
+          {isPending ? (
+            <span className="text-gray-400">...</span>
+          ) : !isLoggedIn ? (
+            <Link
+              href="/login"
+              className="bg-[#d4af37] text-black px-4 py-1 rounded"
+            >
+              Login
+            </Link>
+          ) : (
+            <>
+              <Link
+                href="/my-profile"
+                className="text-[#d4af37]"
+              >
+                {session.user.name || "Profile"}
+              </Link>
 
-      <button
-        className="bg-red-500 text-white px-4 py-1 rounded"
-      >
-        Logout
-      </button>
-    </>
-  )}
+              <button
+                onClick={handleLogout}
+                className="bg-red-500 text-white px-4 py-1 rounded"
+              >
+                Logout
+              </button>
+            </>
+          )}
+        </div>
 
-</div>
-
-        {/* Mobile menu button */}
+        {/* Mobile button */}
         <button
           className="md:hidden text-[#d4af37] text-2xl"
           onClick={() => setOpen(!open)}
@@ -72,11 +81,17 @@ export default function Navbar() {
           <Link href="/my-profile">My Profile</Link>
 
           {!isLoggedIn ? (
-            <button className="bg-[#d4af37] text-black px-4 py-2 rounded">
+            <Link
+              href="/login"
+              className="bg-[#d4af37] text-black px-4 py-2 rounded"
+            >
               Login
-            </button>
+            </Link>
           ) : (
-            <button className="bg-red-500 px-4 py-2 rounded">
+            <button
+              onClick={handleLogout}
+              className="bg-red-500 px-4 py-2 rounded"
+            >
               Logout
             </button>
           )}

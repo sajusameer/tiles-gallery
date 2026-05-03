@@ -2,7 +2,7 @@ import FeaturedTiles from "@/FeaturedTiles";
 import HeroSlider from "@/HeroSlider";
 
 export default async function Home() {
-  const res = await fetch("http://localhost:5000/tiles", {
+  const res = await fetch("http://localhost:3000/data.json", {
     cache: "no-store",
   });
 

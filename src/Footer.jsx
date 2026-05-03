@@ -1,7 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="bg-black text-white border-t border-[#d4af37] mt-10">
-      <div className="max-w-7xl mx-auto p-6 grid md:grid-cols-3 gap-6">
+    <footer className="bg-black text-white border-t border-[#d4af37] mt-0">
+      <div className="mt-10">
+        <div className="max-w-7xl mx-auto p-6 grid md:grid-cols-3 gap-6">
 
         {/* Logo */}
         <div>
@@ -29,6 +30,7 @@ export default function Footer() {
           <p>Email: info@tiles.com</p>
           <p>Phone: +880123456789</p>
         </div>
+      </div>
       </div>
 
       <p className="text-center text-sm pb-4">
