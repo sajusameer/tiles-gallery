@@ -1,97 +1,94 @@
 "use client";
+
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
-const LoginPage = () => {
+export default function LoginPage() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
   const [isShowPassword, setIsShowPassword] = useState(false);
 
   const handleLoginFunc = async (data) => {
-    console.log(data, "data");
-
     const { data: res, error } = await authClient.signIn.email({
-      email: data.email, // required
-      password: data.password, // required
-      rememberMe: true,
+      email: data.email,
+      password: data.password,
       callbackURL: "/",
     });
 
-    console.log(res, error);
-
     if (error) {
-      alert(error.message);
+      toast.error(error.message);
+      return;
     }
-    
 
     if (res) {
-      alert("Signin successful");
+      toast.success("Login successful 🎉");
+      window.location.href = "/";
     }
   };
 
   return (
-    <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
-      <div className="p-4 rounded-xl bg-white">
-        <h2 className="font-bold text-3xl text-center mb-6">
-          Login your account
+    <div className="min-h-screen flex justify-center items-center bg-black">
+      <div className="bg-[#111] border border-[#d4af37] p-6 rounded-xl w-[350px]">
+
+        <h2 className="text-3xl text-center font-bold text-[#d4af37] mb-6">
+          Login
         </h2>
 
-        <form className="space-y-4" onSubmit={handleSubmit(handleLoginFunc)}>
-          <fieldset className="fieldset">
-            <legend className="fieldset-legend">Email</legend>
-            <input
-              type="email"
-              className="input"
-              placeholder="Type here email"
-              {...register("email", {
-                required: "Email field is required",
-              })}
-            />
-            {errors.email && (
-              <p className="text-red-500">{errors.email.message}</p>
-            )}
-          </fieldset>
-          <fieldset className="fieldset relative">
-            <legend className="fieldset-legend">Password</legend>
+        <form onSubmit={handleSubmit(handleLoginFunc)} className="space-y-4">
+
+          {/* Email */}
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full p-2 rounded bg-black border border-[#d4af37] text-white"
+            {...register("email", { required: "Email required" })}
+          />
+          {errors.email && <p className="text-red-500">{errors.email.message}</p>}
+
+          {/* Password */}
+          <div className="relative">
             <input
               type={isShowPassword ? "text" : "password"}
-              className="input"
-              placeholder="Type here password"
-              {...register("password", {
-                required: "Password field is required",
-              })}
+              placeholder="Password"
+              className="w-full p-2 rounded bg-black border border-[#d4af37] text-white"
+              {...register("password", { required: "Password required" })}
             />
+
             <span
-              className="absolute right-2 top-4 cursor-pointer"
               onClick={() => setIsShowPassword(!isShowPassword)}
+              className="absolute right-3 top-3 cursor-pointer text-[#d4af37]"
             >
               {isShowPassword ? <FaEye /> : <FaEyeSlash />}
             </span>
-            {errors.password && (
-              <p className="text-red-500">{errors.password.message}</p>
-            )}
-          </fieldset>
+          </div>
 
-          <button className="btn w-full bg-slate-800 text-white">Login</button>
+          {errors.password && (
+            <p className="text-red-500">{errors.password.message}</p>
+          )}
+
+          {/* Button */}
+          <button className="w-full bg-[#d4af37] text-black py-2 rounded">
+            Login
+          </button>
         </form>
 
-        <p className="mt-4">
-          Don't have an account?{" "}
-          <Link href={"/register"} className="text-blue-500">
+        {/* Link */}
+        <p className="mt-4 text-center text-gray-400">
+          Don’t have an account?{" "}
+          <Link href="/register" className="text-[#d4af37]">
             Register
           </Link>
         </p>
+
       </div>
     </div>
   );
-};
-
-export default LoginPage;
+}

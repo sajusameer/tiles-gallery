@@ -1,13 +1,35 @@
-export default async function TileDetails({ params }) {
-  // 🔥 IMPORTANT: await params
-  const { id } = await params;
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
+import { auth } from "@/lib/auth";
 
-  const res = await fetch("http://localhost:5000/tiles", {
-    cache: "no-store",
+export default async function TileDetails({ params }) {
+  // ✅ Next.js 15+ এ headers() কে await করতে হয়
+  const h = await headers();
+
+  const headerObj = {};
+  h.forEach((value, key) => {
+    headerObj[key] = value;
   });
 
-  const data = await res.json();
-  const tiles = Array.isArray(data) ? data : data.tiles;
+  // 🔐 session check
+  const session = await auth.api.getSession({
+    headers: headerObj,
+  });
+
+  if (!session) {
+    redirect("/login");
+  }
+
+  // ✅ Next.js 15+ এ params কে ও await করা নিরাপদ
+  const { id } = await params;
+
+  // 📦 fetch tiles
+const res = await fetch("http://localhost:3000/data.json", {
+  cache: "no-store",
+});
+
+const data = await res.json();
+const tiles = data.tiles || [];
 
   const tile = tiles.find((t) => String(t.id) === String(id));
 
@@ -43,15 +65,18 @@ export default async function TileDetails({ params }) {
           </p>
 
           <p className="mt-4">
-            <span className="text-[#d4af37] font-semibold">Category:</span> {tile.category}
+            <span className="text-[#d4af37] font-semibold">Category:</span>{" "}
+            {tile.category}
           </p>
 
           <p>
-            <span className="text-[#d4af37] font-semibold">Material:</span> {tile.material}
+            <span className="text-[#d4af37] font-semibold">Material:</span>{" "}
+            {tile.material}
           </p>
 
           <p>
-            <span className="text-[#d4af37] font-semibold">Dimensions:</span> {tile.dimensions}
+            <span className="text-[#d4af37] font-semibold">Dimensions:</span>{" "}
+            {tile.dimensions}
           </p>
 
           <p className="mt-3 text-[#d4af37] text-xl font-bold">
