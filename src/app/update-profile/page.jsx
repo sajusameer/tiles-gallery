@@ -12,7 +12,7 @@ export default function UpdateProfile() {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
 
-  // 🔐 protect route + set default data
+  //  protect route + set default data
   useEffect(() => {
     if (!isPending && !session) {
       router.push("/login");
@@ -43,7 +43,7 @@ export default function UpdateProfile() {
     }
 
     if (data) {
-      alert("Profile updated successfully ✅");
+      alert("Profile updated successfully");
       router.push("/my-profile");
     }
   };

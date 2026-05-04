@@ -21,7 +21,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [gLoading, setGLoading] = useState(false);
 
-  // 🔐 Email Login
+  //  Email Login
   const handleLoginFunc = async (data) => {
     setLoading(true);
 
@@ -44,7 +44,7 @@ export default function LoginPage() {
     }
   };
 
-  // 🔐 Google Login
+  //  Google Login
   const handleGoogleLogin = async () => {
     try {
       setGLoading(true);

@@ -9,7 +9,7 @@ export default function MyProfile() {
   const { data: session, isPending } = useSession();
   const router = useRouter();
 
-  // 🔐 protect route
+  //  protect route
   useEffect(() => {
     if (!isPending && !session) {
       router.push("/login");

@@ -10,7 +10,8 @@ export default function Footer() {
             TilesGallery
           </h2>
           <p className="mt-2 text-sm">
-            Premium tiles for modern living spaces.
+            Premium tiles for modern living spaces. <br />
+            Tiles crafted for luxury interiors.
           </p>
         </div>
 
@@ -27,13 +28,14 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h3 className="text-[#d4af37] mb-2">Contact Us</h3>
+          <p>Hilishahor, Chattogram</p>
           <p>Email: info@tiles.com</p>
           <p>Phone: +880123456789</p>
         </div>
       </div>
       </div>
 
-      <p className="text-center text-sm pb-4">
+      <p className="text-center text-sm pb-4 mb-10">
         © 2026 Tiles Gallery. All rights reserved.
       </p>
     </footer>

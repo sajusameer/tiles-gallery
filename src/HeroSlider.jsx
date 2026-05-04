@@ -31,7 +31,7 @@ export default function HeroSlider() {
               backgroundPosition: "center",
             }}
           >
-            {/* 🔥 Dark overlay */}
+            {/*  Dark overlay */}
             <div className="bg-black/70 w-full h-full flex flex-col items-center justify-center text-center px-4">
 
               <h1 className="text-4xl md:text-6xl font-bold text-[#d4af37] drop-shadow-lg">

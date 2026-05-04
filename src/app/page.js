@@ -8,7 +8,7 @@ export default async function Home() {
 
   const data = await res.json();
 
-  // ✅ SAFE tiles
+  //  SAFE tiles
   const tiles = Array.isArray(data)
     ? data.slice(0, 4)
     : data?.tiles?.slice(0, 4) || [];
@@ -16,32 +16,38 @@ export default async function Home() {
   return (
     <div className="bg-black text-white">
       
-      {/* 🔥 Banner / Slider */}
+      {/*  Banner / Slider */}
       <HeroSlider />
 
+      {/* marque */}
 
-      {/* 🔥 Marquee */}
-<div className="bg-[#111] text-[#d4af37] py-2 overflow-hidden flex items-center">
-  
-  {/* 🔒 Fixed label */}
-  <div className="px-4 font-semibold whitespace-nowrap border-r border-[#d4af37] bg-black">
-    New Arrivals:
-  </div>
+          <div className="bg-[#111] text-[#d4af37] py-2 flex items-center">
 
-  {/* 🔄 Scrolling text */}
-  <div className="flex animate-marquee gap-10 ml-4 whitespace-nowrap">
-    <span>Ceramic Blue Tile</span>
-    <span>Modern Geometric Patterns</span>
-    <span>Join the Community...</span>
+            {/*  Fixed label */}
+            <div className="px-4 font-semibold whitespace-nowrap border-r border-[#d4af37] bg-black z-10">
+              New Arrivals:
+            </div>
 
-    {/* duplicate for smooth loop */}
-    <span>Ceramic Blue Tile</span>
-    <span>Modern Geometric Patterns</span>
-    <span>Join the Community...</span>
-  </div>
+            {/* 🔄 Wrapper (important fix) */}
+            <div className="overflow-hidden w-full">
+              <div className="flex animate-marquee gap-10 ml-4 whitespace-nowrap">
+                 <span>Weekly Feature: </span>
+                <span> Modern Geometric Patterns |</span>
+                <span>Join the Community...</span>
 
-</div>
-      {/* 🔥 Featured Tiles */}
+                <span>Ceramic Blue Tile</span>
+                <span>Modern Geometric Patterns</span>
+                <span>Join the Community...</span>
+
+                {/* duplicate */}
+                <span>Ceramic Blue Tile</span>
+                <span>Modern Geometric Patterns</span>
+                <span>Join the Community...</span>
+              </div>
+            </div>
+
+          </div>
+      {/* Featured Tiles */}
       <FeaturedTiles tiles={tiles} />
 
     </div>

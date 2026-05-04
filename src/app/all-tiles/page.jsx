@@ -14,7 +14,7 @@ export default function AllTiles() {
       .then((data) => {
         const allTiles = Array.isArray(data) ? data : data.tiles;
         setTiles(allTiles);
-        setLoading(false); // ✅ data load শেষ
+        setLoading(false); 
       });
   }, []);
 
@@ -25,7 +25,7 @@ export default function AllTiles() {
   return (
     <div className="bg-black text-white min-h-screen px-4 py-10">
 
-      {/* 🔍 Search Bar */}
+      {/*  Search Bar */}
       <div className="max-w-3xl mx-auto mb-10">
         <input
           type="text"
@@ -35,13 +35,13 @@ export default function AllTiles() {
         />
       </div>
 
-      {/* 🔥 LOADING UI */}
+      {/*  LOADING UI */}
       {loading ? (
         <div className="flex justify-center items-center py-20">
           <span className="loading loading-spinner loading-lg text-[#d4af37]"></span>
         </div>
       ) : (
-        /* 🧱 Tiles Grid */
+        /*  Tiles Grid */
         <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-8">
           {filteredTiles.map((tile) => (
             <div

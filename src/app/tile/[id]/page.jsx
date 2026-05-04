@@ -11,7 +11,7 @@ export default async function TileDetails({ params }) {
     headerObj[key] = value;
   });
 
-  // 🔐 session check
+  //  session check
   const session = await auth.api.getSession({
     headers: headerObj,
   });

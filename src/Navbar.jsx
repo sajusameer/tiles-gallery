@@ -7,14 +7,15 @@ import { useSession, authClient } from "@/lib/auth-client";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  // 🔐 real session
+  //  session
   const { data: session, isPending } = useSession();
 
   const isLoggedIn = !!session;
 
+  //  logout → home
   const handleLogout = async () => {
     await authClient.signOut();
-    window.location.href = "/login";
+    window.location.href = "/";
   };
 
   return (
@@ -47,13 +48,19 @@ export default function Navbar() {
             </Link>
           ) : (
             <>
-              <Link
-                href="/my-profile"
-                className="text-[#d4af37]"
-              >
-                {session.user.name || "Profile"}
+              {/*  Profile Image */}
+              <Link href="/my-profile">
+                <img
+                  src={
+                    session?.user?.image ||
+                    "https://i.ibb.co/4pDNDk1/avatar.png"
+                  }
+                  alt="user"
+                  className="w-10 h-10 rounded-full border-2 border-[#d4af37] object-cover"
+                />
               </Link>
 
+              {/* Logout */}
               <button
                 onClick={handleLogout}
                 className="bg-red-500 text-white px-4 py-1 rounded"
@@ -73,27 +80,44 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/*  Mobile menu */}
       {open && (
         <div className="md:hidden flex flex-col gap-4 p-4 bg-[#0a0a0a]">
+
           <Link href="/">Home</Link>
           <Link href="/all-tiles">All Tiles</Link>
           <Link href="/my-profile">My Profile</Link>
 
-          {!isLoggedIn ? (
+          {isPending ? (
+            <span className="text-gray-400">Loading...</span>
+          ) : !isLoggedIn ? (
             <Link
               href="/login"
-              className="bg-[#d4af37] text-black px-4 py-2 rounded"
+              className="bg-[#d4af37] text-black px-4 py-2 rounded text-center"
             >
               Login
             </Link>
           ) : (
-            <button
-              onClick={handleLogout}
-              className="bg-red-500 px-4 py-2 rounded"
-            >
-              Logout
-            </button>
+            <>
+              {/* Mobile Profile */}
+              <div className="flex items-center gap-3">
+                <img
+                  src={
+                    session?.user?.image ||
+                    "https://i.ibb.co/4pDNDk1/avatar.png"
+                  }
+                  className="w-10 h-10 rounded-full border border-[#d4af37]"
+                />
+                <span>{session.user.name}</span>
+              </div>
+
+              <button
+                onClick={handleLogout}
+                className="bg-red-500 px-4 py-2 rounded"
+              >
+                Logout
+              </button>
+            </>
           )}
         </div>
       )}
