@@ -39,16 +39,19 @@ TilesGallery is a modern web application where users can explore different aesth
 
 ---
 
-##  NPM Packages Used
-
-```bash
-react-hook-form
-react-icons
-react-toastify
-swiper
-better-auth
-mongodb
-```
+## Packages & Links
+* react-hook-form
+## https://www.npmjs.com/package/react-hook-form
+* react-icons
+## https://www.npmjs.com/package/react-icons
+* react-toastify
+## https://www.npmjs.com/package/react-toastify
+* swiper
+## https://www.npmjs.com/package/swipert
+* better-auth
+## https://www.npmjs.com/package/better-auth
+* mongodb
+## https://www.npmjs.com/package/mongodb
 
 ---
 
